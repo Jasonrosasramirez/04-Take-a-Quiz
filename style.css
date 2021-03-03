@@ -1,0 +1,32 @@
+/* the section below is for debugging */
+
+header,
+.TitleCardContainer {
+    border: 4px orange dashed;
+    align-content: center;
+} /* Used for debugging */
+
+header h1,
+header p {
+    border: 2px blue dashed;
+    background: papayawhip;
+}
+
+.TitleCard {
+    border: 2px blue dashed;
+} /* Used for debugging */
+
+
+/* Setting up the Style below */
+
+header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.TitleCardContainer {
+    padding: 10px;
+
+}
+
