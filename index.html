@@ -10,72 +10,98 @@
 <head>
 
 
-
-
 <body> 
     <header>
         <h1> Hello! You're taking a quiz </h1>
-        <p> Timer Goes Here </p>
+        <div class="TimerDisplay">
+            <p> Time Remaining: </p>
+            <p> TimeElement </p>
+        </div>
     </header>
 
+    
     <div class = "TitleCardContainer">
         <div class="TitleCard" id="Opening">
             <h2> Coding Quiz Challenge </h2>
             <p> Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds each! <p>
-            <button type="button"> Click me to start the Quiz </button> <!-- I'll need an event listener -->
-        <div>
+            <button type="button" class="SubmitButton"> Click me to start the Quiz </button> <!-- I'll need an event listener -->
+        </div>
 
-        <div class="TitleCard" id="Question 1">
+        <div class="TitleCard" id="Question1">
+            <h3> Question 1 </h3>
             <h2> Commonly used data types DO NOT Include: </h2>
-            <button type="button" class="QuestionButton"> 1. Strings </button>
-            <button type="button" class="QuestionButton"> 2. Booleans </button>
-            <button type="button" class="QuestionButton"> 3. Alerts </button>
-            <button type="button" class="QuestionButton"> 4. Numbers </button>
-            <p> Placeholder on the Question Resualt <p>
-        <div>
+            <div class="QuestionContainer"> 
+                <button type="button" class="QuestionButton"> 1. Strings </button>
+                <button type="button" class="QuestionButton"> 2. Booleans </button>
+                <button type="button" class="QuestionButton"> 3. Alerts </button>
+                <button type="button" class="QuestionButton"> 4. Numbers </button>
+                <button type="button" class="SubmitButton"> Submit </button>
+            </div>
+             <p> Placeholder on the Question Result <p>
+        </div>
 
-        <div class="TitleCard" id="Question 2">
+        <div class="TitleCard" id="Question2">
+            <h3> Question 2 </h3>
             <h2> Arrays in JavaScript can be used to Store __________ : </h2>
-            <button type="button" class="QuestionButton"> 1. Numbers and Strings </button>
-            <button type="button" class="QuestionButton"> 2. Other Arrays </button>
-            <button type="button" class="QuestionButton"> 3. Booleans </button>
-            <button type="button" class="QuestionButton"> 4. All of the Above </button>
-            <p> Placeholder on the Question Resualt <p>
-        <div>
+            <div class="QuestionContainer"> 
+                <button type="button" class="QuestionButton"> 1. Numbers and Strings </button>
+                <button type="button" class="QuestionButton"> 2. Other Arrays </button>
+                <button type="button" class="QuestionButton"> 3. Booleans </button>
+                <button type="button" class="QuestionButton"> 4. All of the Above </button>
+                <button type="button" class="SubmitButton"> Submit </button>           
+            </div>
+            <p> Placeholder on the Question Result <p>
+        </div>
 
-        <div class="TitleCard" id="Question 3">
+        <div class="TitleCard" id="Question3">
+            <h3> Question 3 </h3>
             <h2> The Condition in an if/else Statement is Enclosed with __________ : </h2>
-            <button type="button" class="QuestionButton"> 1. Quotes </button>
-            <button type="button" class="QuestionButton"> 2. Curly Braces </button>
-            <button type="button" class="QuestionButton"> 3. Parentheses </button>
-            <button type="button" class="QuestionButton"> 4. Square Brackets </button>
-            <p> Placeholder on the Question Resualt <p>
-        <div>
+            <div class="QuestionContainer"> 
+                <button type="button" class="QuestionButton"> 1. Quotes </button>
+                <button type="button" class="QuestionButton"> 2. Curly Braces </button>
+                <button type="button" class="QuestionButton"> 3. Parentheses </button>
+                <button type="button" class="QuestionButton"> 4. Square Brackets </button>
+                <button type="button" class="SubmitButton"> Submit </button>
+            </div>           
+            <p> Placeholder on the Question Result <p>
+        </div>
 
-        <div class="TitleCard" id="Question 4">
+        <div class="TitleCard" id="Question4">
+            <h3> Question 4 </h3>
             <h2> A very useful tool used during development and debugging for printing content debugger is: </h2>
-            <button type="button" class="QuestionButton"> 1. JavaScript </button>
-            <button type="button" class="QuestionButton"> 2. Terminal / Bash </button>
-            <button type="button" class="QuestionButton"> 3. For Loops </button>
-            <button type="button" class="QuestionButton"> 4. Console Log </button>
-            <p> Placeholder on the Question Resualt <p>
-        <div>
+            <div class="QuestionContainer">
+                <button type="button" class="QuestionButton"> 1. JavaScript </button>
+                <button type="button" class="QuestionButton"> 2. Terminal / Bash </button>
+                <button type="button" class="QuestionButton"> 3. For Loops </button>
+                <button type="button" class="QuestionButton"> 4. Console Log </button>
+                <button type="button" class="SubmitButton"> Submit </button>
+            </div>        
+            <p> Placeholder on the Question Result <p>
+        </div>
 
-
-
-
+        <div class="TitleCard" id="ResultsPage">
+            <h3> The End! </h3>
+            <h2> Below are your results </h2>
+            
+            <br>
+            <br> Percent Score </br>
+            <p> Letter Grade </p>
+            
+            <br>
+            <form> 
+                <label for="fname"> First Name: </label>
+                <input type="text" id="fname" name="fname">
+            </form>
+            <button type="button" class="SubmitButton"> Try Again? </button>
+                
+            <p> Complete! <p>
+        </div>
 
 
     </div>
 
     
     
-        
-
-
-
-
-
 </body>
 
 

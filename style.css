@@ -9,13 +9,19 @@ header,
 header h1,
 header p {
     border: 2px blue dashed;
-    background: papayawhip;
 }
 
 .TitleCard {
     border: 2px blue dashed;
+    margin: 5px;
 } /* Used for debugging */
 
+.QuestionContainer {
+    border: 2px green dashed;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+}
 
 /* Setting up the Style below */
 
@@ -23,10 +29,30 @@ header {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
+    padding: 5px;
+    border-bottom: 4px purple solid;
+}
+
+.TimerDisplay {
+    border: 2px green dashed;
+    display: flex;
+    justify-content: space-around;
 }
 
 .TitleCardContainer {
     padding: 10px;
-
 }
 
+.QuestionButton { 
+    margin: 5px;
+    color: white;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+.SubmitButton { 
+    margin: 5px;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+}
