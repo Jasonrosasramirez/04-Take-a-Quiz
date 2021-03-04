@@ -3,8 +3,7 @@
 header,
 .TitleCardContainer {
     border: 4px orange dashed;
-    align-content: center;
-} /* Used for debugging */
+} 
 
 header h1,
 header p {
@@ -14,14 +13,15 @@ header p {
 .TitleCard {
     border: 2px blue dashed;
     margin: 5px;
-} /* Used for debugging */
+} 
 
 .QuestionContainer {
     border: 2px green dashed;
     display: flex;
+    flex-direction: column;
     justify-content: left;
-    text-align: center;
 }
+
 
 /* Setting up the Style below */
 
@@ -48,6 +48,8 @@ header {
     color: white;
     background-color: purple;
     border-radius: 5px;
+    height: 60px;
+    width: 150px;
 }
 
 .SubmitButton { 
