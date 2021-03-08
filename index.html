@@ -14,8 +14,7 @@
     <header>
         <h1> Hello! You're taking a quiz </h1>
         <div class="TimerDisplay">
-            <p> Time Remaining: </p>
-            <p> TimeElement </p>
+            <p>  Time Remaining: <span id="countDownTimerID">10</span>  </p>
         </div>
     </header>
 
@@ -24,17 +23,17 @@
         <div class="TitleCard" id="Opening">
             <h2> Coding Quiz Challenge </h2>
             <p> Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds each! <p>
-            <button type="button" class="SubmitButton"> Click me to start the Quiz </button> <!-- I'll need an event listener -->
+            <button type="button" class="StartSubmitButton"> Click me to start the Quiz </button> <!-- I'll need an event listener -->
         </div>
 
         <div class="TitleCard" id="Question1">
             <h3> Question 1 </h3>
             <h2> Commonly used data types DO NOT Include: </h2>
             <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton"> 1. Strings </button>
-                <button type="button" class="QuestionButton"> 2. Booleans </button>
-                <button type="button" class="QuestionButton"> 3. Alerts </button>
-                <button type="button" class="QuestionButton"> 4. Numbers </button>
+                <button type="button" class="QuestionButton"> A. Strings </button>
+                <button type="button" class="QuestionButton"> B. Booleans </button>
+                <button type="button" class="QuestionButton"> C. Alerts </button>
+                <button type="button" class="QuestionButton"> D. Numbers </button>
                 <button type="button" class="SubmitButton"> Submit </button>
             </div>
              <p> Placeholder on the Question Result <p>
@@ -44,10 +43,10 @@
             <h3> Question 2 </h3>
             <h2> Arrays in JavaScript can be used to Store __________ : </h2>
             <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton"> 1. Numbers and Strings </button>
-                <button type="button" class="QuestionButton"> 2. Other Arrays </button>
-                <button type="button" class="QuestionButton"> 3. Booleans </button>
-                <button type="button" class="QuestionButton"> 4. All of the Above </button>
+                <button type="button" class="QuestionButton"> A. Numbers and Strings </button>
+                <button type="button" class="QuestionButton"> B. Other Arrays </button>
+                <button type="button" class="QuestionButton"> C. Booleans </button>
+                <button type="button" class="QuestionButton"> D. All of the Above </button>
                 <button type="button" class="SubmitButton"> Submit </button>           
             </div>
             <p> Placeholder on the Question Result <p>
@@ -57,10 +56,10 @@
             <h3> Question 3 </h3>
             <h2> The Condition in an if/else Statement is Enclosed with __________ : </h2>
             <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton"> 1. Quotes </button>
-                <button type="button" class="QuestionButton"> 2. Curly Braces </button>
-                <button type="button" class="QuestionButton"> 3. Parentheses </button>
-                <button type="button" class="QuestionButton"> 4. Square Brackets </button>
+                <button type="button" class="QuestionButton"> A. Quotes </button>
+                <button type="button" class="QuestionButton"> B. Curly Braces </button>
+                <button type="button" class="QuestionButton"> C. Parentheses </button>
+                <button type="button" class="QuestionButton"> D. Square Brackets </button>
                 <button type="button" class="SubmitButton"> Submit </button>
             </div>           
             <p> Placeholder on the Question Result <p>
@@ -70,10 +69,10 @@
             <h3> Question 4 </h3>
             <h2> A very useful tool used during development and debugging for printing content debugger is: </h2>
             <div class="QuestionContainer">
-                <button type="button" class="QuestionButton"> 1. JavaScript </button>
-                <button type="button" class="QuestionButton"> 2. Terminal / Bash </button>
-                <button type="button" class="QuestionButton"> 3. For Loops </button>
-                <button type="button" class="QuestionButton"> 4. Console Log </button>
+                <button type="button" class="QuestionButton"> A. JavaScript </button>
+                <button type="button" class="QuestionButton"> B. Terminal / Bash </button>
+                <button type="button" class="QuestionButton"> C. For Loops </button>
+                <button type="button" class="QuestionButton"> D. Console Log </button>
                 <button type="button" class="SubmitButton"> Submit </button>
             </div>        
             <p> Placeholder on the Question Result <p>
@@ -101,7 +100,7 @@
     </div>
 
     
-    
+    <script src="script.js"> </script>
 </body>
 
 
