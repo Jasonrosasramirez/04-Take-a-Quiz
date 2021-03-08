@@ -4,9 +4,14 @@ var quizTimeDeducation = 10; // This is the amount of time lost per wrong answer
 
 var countDownVariable = document.querySelector('#countdownID'); //
 var beginTheQuizButton = document.querySelector('.StartSubmitButton');
-var countDownTimerID = 10; 
+var countDownTimerID = 180; 
 
 beginTheQuizButton.addEventListener('click', IamTheQuiz());
+
+
+// Correct and Incorrect Section 
+
+
 
 function CountDownFunction() {
     setInterval(function(){ // iterates once every 1000 ms (or 1s) 
@@ -14,7 +19,7 @@ function CountDownFunction() {
         countDownTimerID -= 1; 
         if (countDownTimerID <= 0) {
             alert("Hey! Time is up. Show the results screen");
-            countDownTimerID = 10;
+            countDownTimerID = 180;
         }
     }, 1000)
     logmee();
