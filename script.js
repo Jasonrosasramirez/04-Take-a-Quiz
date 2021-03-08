@@ -2,19 +2,32 @@ var quizTimeRemaining = 180; //The total time for the quiz left in seconds.
 var quizTimeDeducation = 10; // This is the amount of time lost per wrong answer in seconds. 
 
 
+// relates HTML elements to Javsascript Variables 
+var countDownVariable = document.querySelector("#countdownID");
+var beginTheQuizButton = document.querySelector(".StartSubmitButton");
+countDownVariable = 10;
 
-// var buttonName = document.querySelector(".Submit")
-// buttonName.addEventListener("click", logmee()); //function 
+
+beginTheQuizButton.addEventListener("click", StartQuizFunction());
 
 
+    
 
+function StartQuizFunction() { 
+    console.log("Hey! I have been clicked" + " \nI am the countdown: " + countDownVariable);
+    
+    setInterval(function(){
+        countDownVariable -= 1;}, 1000) // decreases the quiz timer as the quiz goes on.
+    
 
-function logmee() {
-    console.log("The submit button was clicked");
 
 }
 
-function YourGrade(){
+
+
+
+
+function YourGradeFunction (){
     var scoreTotal = 100; 
     var scoreObtained; // will need some query selection 
     var scorePercentage = scoreObtained / scoreTotal; 
