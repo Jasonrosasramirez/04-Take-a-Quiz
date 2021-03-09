@@ -10,10 +10,6 @@ beginTheQuizButton.addEventListener('click', IamTheQuiz);
 
 
 
-
-
-
-
 function IamTheQuiz(){
     
     function CountDownFunction() {
@@ -30,11 +26,12 @@ function IamTheQuiz(){
 
     CountDownFunction();
     
-    var firstTestButton = document.querySelector("#rightAnswerOne"); // document.getElementById("1Cright").getAttribute("class");
+    var firstTestButton = document.querySelector(".RightClass"); // document.getElementById("1Cright").getAttribute("class");
+    var firstTestButtonAttribute = firstTestButton.getAttribute("class");
     firstTestButton.addEventListener('click', addthescore);
 
     function addthescore() {
-        console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton);
+        console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton + "first att button thingy " + firstTestButtonAttribute);
         
     }
 
