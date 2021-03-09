@@ -31,7 +31,13 @@ function IamTheQuiz(){
     firstTestButton.addEventListener('click', addthescore);
 
     function addthescore() {
-        console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton + "first att button thingy " + firstTestButtonAttribute);
+        if (firstTestButtonAttribute = "RightClass") {
+            console.log("This is the first class: " + firstTestButtonAttribute);
+            console.log("The current score: " + invisibleScore);
+            invisibleScore += 20; 
+            console.log("The current score: " + invisibleScore);
+        }
+        
         
     }
 
