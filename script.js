@@ -1,3 +1,12 @@
+// Correct and Incorrect Section 
+// testButtonRightAnswerButton = document.querySelector(".RightClass");
+// testButtonRightAnswerButton.addEventListener('click', TheThing());
+
+// function TheThing(){
+   // console.log("I am the right answer hahahaha");
+
+// }
+
 
 var quizTimeDeducation = 10; // This is the amount of time lost per wrong answer in seconds. 
 
@@ -6,30 +15,24 @@ var countDownVariable = document.querySelector('#countdownID'); //
 var beginTheQuizButton = document.querySelector('.StartSubmitButton');
 var countDownTimerID = 180; 
 
-beginTheQuizButton.addEventListener('click', IamTheQuiz());
-
-
-// Correct and Incorrect Section 
-
-
-
-function CountDownFunction() {
-    setInterval(function(){ // iterates once every 1000 ms (or 1s) 
-        countDownVariable.innerHTML = countDownTimerID; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
-        countDownTimerID -= 1; 
-        if (countDownTimerID <= 0) {
-            alert("Hey! Time is up. Show the results screen");
-            countDownTimerID = 180;
-        }
-    }, 1000)
-    logmee();
-}
-
+beginTheQuizButton.addEventListener('click', IamTheQuiz);
 
 
 function IamTheQuiz(){
-    CountDownFunction();
+    
+    function CountDownFunction() {
+        setInterval(function(){ // iterates once every 1000 ms (or 1s) 
+            countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
+            countDownTimerID -= 1; 
+            if (countDownTimerID <= 0) {
+                alert("Hey! Time is up. Show the results screen");
+                countDownTimerID = 180;
+            }
+        }, 1000)
+        logmee();
+    }
 
+    CountDownFunction();
 }
 
 
