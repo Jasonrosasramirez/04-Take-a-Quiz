@@ -1,14 +1,5 @@
-// Correct and Incorrect Section 
-// testButtonRightAnswerButton = document.querySelector(".RightClass");
-// testButtonRightAnswerButton.addEventListener('click', TheThing());
 
-// function TheThing(){
-   // console.log("I am the right answer hahahaha");
-
-// }
-
-
-var quizTimeDeducation = 10; // This is the amount of time lost per wrong answer in seconds. 
+var invisibleScore = 0;
 
 
 var countDownVariable = document.querySelector('#countdownID'); //
@@ -29,21 +20,21 @@ function IamTheQuiz(){
                 countDownTimerID = 180;
             }
         }, 1000)
-        logmee();
-    }
+        console.log("The submit button was clicked");
+    } // Reduces the timer once per second
 
     CountDownFunction();
+
+    var firstTestButton = document.getElementById("1Cright").getAttribute("class");
+    console.log(firstTestButton);
+    if (firstTestButton = "RightClass") {
+        console.log("This is the right class here! using = RightClass");    
+        console.log(typeof(firstTestButton));
+    } else {
+        console.log("Was not selected");
+    }
+
 }
-
-
-
-function logmee() {
-    console.log("The submit button was clicked");
-
-}
-
-
-
 
 
 
