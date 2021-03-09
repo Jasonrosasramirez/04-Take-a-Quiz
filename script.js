@@ -8,14 +8,10 @@ var countDownTimerID = 180;
 var beginTheQuizButton = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
 beginTheQuizButton.addEventListener('click', IamTheQuiz);
 
-var firstTestButton = document.querySelector("#rightAnswerOne"); // document.getElementById("1Cright").getAttribute("class");
-firstTestButton.addEventListener('click', addthescore);
 
 
-function addthescore() {
-    console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton);
-    
-}
+
+
 
 
 function IamTheQuiz(){
@@ -34,7 +30,15 @@ function IamTheQuiz(){
 
     CountDownFunction();
     
-    
+    var firstTestButton = document.querySelector("#rightAnswerOne"); // document.getElementById("1Cright").getAttribute("class");
+    firstTestButton.addEventListener('click', addthescore);
+
+    function addthescore() {
+        console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton);
+        
+    }
+
+
 
 }
 
