@@ -2,11 +2,20 @@
 var invisibleScore = 0;
 
 
-var countDownVariable = document.querySelector('#countdownID'); //
-var beginTheQuizButton = document.querySelector('.StartSubmitButton');
+var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
+var beginTheQuizButton = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
 beginTheQuizButton.addEventListener('click', IamTheQuiz);
+
+var firstTestButton = document.querySelector("#rightAnswerOne"); // document.getElementById("1Cright").getAttribute("class");
+firstTestButton.addEventListener('click', addthescore);
+
+
+function addthescore() {
+    console.log("this is the class type of: " + typeof(firstTestButton) + " " + firstTestButton);
+    
+}
 
 
 function IamTheQuiz(){
@@ -24,15 +33,8 @@ function IamTheQuiz(){
     } // Reduces the timer once per second
 
     CountDownFunction();
-
-    var firstTestButton = document.getElementById("1Cright").getAttribute("class");
-    console.log(firstTestButton);
-    if (firstTestButton = "RightClass") {
-        console.log("This is the right class here! using = RightClass");    
-        console.log(typeof(firstTestButton));
-    } else {
-        console.log("Was not selected");
-    }
+    
+    
 
 }
 
