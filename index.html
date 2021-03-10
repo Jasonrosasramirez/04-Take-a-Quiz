@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 
 <html>
-    
-<head>
-    <title> This is the Quiz Tab </title>
 
-    <link rel="stylesheet" href="./default.css">
-    <link rel="stylesheet" href="./style.css">
-<head>
+    <head>
+        <title> This is the Quiz Tab </title>
+
+        <link rel="stylesheet" href="./default.css">
+        <link rel="stylesheet" href="./style.css">
+
+    <head>
 
 
-<body> 
-    <header>
-        <h1> Hello! You're taking a quiz </h1>
-        <div class="TimerDisplay">
-            <p>  Time Remaining: <span id="countdownID">10</span>  </p>
-        </div>
-    </header>
-
-    
-    <div class = "TitleCardContainer">
-        <div class="TitleCard" id="Opening">
-            <h2> Coding Quiz Challenge </h2>
-            <p> Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds each! <p>
-            <button type="button" class="StartSubmitButton" > Click me to start the Quiz </button> 
-        </div>
-
-        <div class="TitleCard" id="Question1">
-            <h3> Question 1 </h3>
-            <h2> Commonly used data types DO NOT Include: </h2>
-            <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton WrongClass" id = "1Awrong"> A. Strings </button>
-                <button type="button" class="QuestionButton WrongClass" id = "1Bwrong"> B. Booleans </button>
-                <button type="button" class="QuestionButton RightClass" id = "rightAnswerOne"> C. Alerts </button>
-                <button type="button" class="QuestionButton WrongClass" id = "1Dwrong"> D. Numbers </button>
-                <button type="button" class="SubmitButton"> Submit </button>
+    <body>
+        <header>
+            <h1> Hello! You're taking a quiz </h1>
+            <div class="TimerDisplay">
+                <p> Time Remaining: <span id="countdownID">10</span> </p>
             </div>
-             <p> Placeholder on the Question Result <p>
-        </div>
+        </header>
 
-        <div class="TitleCard" id="Question2">
-            <h3> Question 2 </h3>
-            <h2> Arrays in JavaScript can be used to Store __________ : </h2>
-            <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton WrongClass"> A. Numbers and Strings </button>
-                <button type="button" class="QuestionButton WrongClass"> B. Other Arrays </button>
-                <button type="button" class="QuestionButton WrongClass"> C. Booleans </button>
-                <button type="button" class="QuestionButton RightClass"> D. All of the Above </button>
-                <button type="button" class="SubmitButton"> Submit </button>           
+
+        <div class="TitleCardContainer">
+            <div class="TitleCard" id="Opening">
+                <h2> Coding Quiz Challenge </h2>
+                <p> Try to answer the following code related questions within the time limit. Keep in mind that
+                    incorrect answers will penalize your score/time by ten seconds each!
+                <p>
+                    <button type="button" class="StartSubmitButton"> Click me to start the Quiz </button>
             </div>
-            <p> Placeholder on the Question Result <p>
-        </div>
 
-        <div class="TitleCard" id="Question3">
-            <h3> Question 3 </h3>
-            <h2> The Condition in an if/else Statement is Enclosed with __________ : </h2>
-            <div class="QuestionContainer"> 
-                <button type="button" class="QuestionButton"> A. Quotes </button>
-                <button type="button" class="QuestionButton"> B. Curly Braces </button>
-                <button type="button" class="QuestionButton"> C. Parentheses </button>
-                <button type="button" class="QuestionButton"> D. Square Brackets </button>
-                <button type="button" class="SubmitButton"> Submit </button>
-            </div>           
-            <p> Placeholder on the Question Result <p>
-        </div>
+            <!-- Added in with tutor - Section below is referenced with object array -->
+            <div id="TitleCard" class="disappear">
+                <h3 id="question" class="disappear"></h3>
+                <div id="choices" class="choiceBtns"> </div>
+            </div>
 
-        <div class="TitleCard" id="Question4">
-            <h3> Question 4 </h3>
-            <h2> A very useful tool used during development and debugging for printing content debugger is: </h2>
-            <div class="QuestionContainer">
-                <button type="button" class="QuestionButton"> A. JavaScript </button>
-                <button type="button" class="QuestionButton"> B. Terminal / Bash </button>
-                <button type="button" class="QuestionButton"> C. For Loops </button>
-                <button type="button" class="QuestionButton"> D. Console Log </button>
-                <button type="button" class="SubmitButton"> Submit </button>
-            </div>        
-            <p> Placeholder on the Question Result <p>
-        </div>
+            <div class="TitleCard" id="Question2">
+                <h3> Question 2 </h3>
+                <h2> Arrays in JavaScript can be used to Store __________ : </h2>
+                <div class="QuestionContainer">
+                    <button type="button" class="QuestionButton WrongClass"> A. Numbers and Strings </button>
+                    <button type="button" class="QuestionButton WrongClass"> B. Other Arrays </button>
+                    <button type="button" class="QuestionButton WrongClass"> C. Booleans </button>
+                    <button type="button" class="QuestionButton RightClass"> D. All of the Above </button>
+                    <button type="button" class="SubmitButton"> Submit </button>
+                </div>
+                <p> Placeholder on the Question Result
+                <p>
+            </div>
 
-        <div class="TitleCard" id="ResultsPage">
-            <h3> The End! </h3>
-            <h2> Below are your results </h2>
-            
-            <br>
-            <br> Percent Score: 96% </br>
-            <p> Letter Grade: A </p>
-            
-            <br>
-            <form> 
-                <label for="fname"> First Name: </label>
-                <input type="text" id="fname" name="fname">
-            </form>
-            <button type="button" class="SubmitButton"> Try Again? </button>
-                
-            <p> Complete! <p>
-        </div>
+            <div class="TitleCard" id="Question3">
+                <h3> Question 3 </h3>
+                <h2> The Condition in an if/else Statement is Enclosed with __________ : </h2>
+                <div class="QuestionContainer">
+                    <button type="button" class="QuestionButton WrongClass"> A. Quotes </button>
+                    <button type="button" class="QuestionButton RightClass"> B. Curly Braces </button>
+                    <button type="button" class="QuestionButton WrongClass"> C. Parentheses </button>
+                    <button type="button" class="QuestionButton WrongClass"> D. Square Brackets </button>
+                    <button type="button" class="SubmitButton"> Submit </button>
+                </div>
+                <p> Placeholder on the Question Result
+                <p>
+            </div>
+
+            <div class="TitleCard" id="Question4">
+                <h3> Question 4 </h3>
+                <h2> A very useful tool used during development and debugging for printing content debugger is: </h2>
+                <div class="QuestionContainer">
+                    <button type="button" class="QuestionButton WrongClass"> A. JavaScript </button>
+                    <button type="button" class="QuestionButton WrongClass"> B. Terminal / Bash </button>
+                    <button type="button" class="QuestionButton WrongClass"> C. For Loops </button>
+                    <button type="button" class="QuestionButton RightClass"> D. Console Log </button>
+                    <button type="button" class="SubmitButton"> Submit </button>
+                </div>
+                <p> Placeholder on the Question Result
+                <p>
+            </div>
+
+            <div class="TitleCard" id="ResultsPage">
+                <h3> The End! </h3>
+                <h2> Below are your results </h2>
+
+                <br>
+                <br> Percent Score: 96% </br>
+                <p> Letter Grade: A </p>
+
+                <br>
+                <form>
+                    <label for="fname"> First Name: </label>
+                    <input type="text" id="fname" name="fname">
+                </form>
+                <button type="button" class="SubmitButton"> Try Again? </button>
+
+                <p> Complete!
+                <p>
+            </div>
+        </div> <!-- Ending Container Div -->
+
+        <footer>
+            <h2> Initials: <span id="initialsID"> JRR </span> </h2>
+            <h2> Previous Score: <span id="previousScoreID"> 999% </span> </h2>
+
+        </footer>
 
 
-    </div>
-
-    
-<script src="script.js"> </script>
-</body>
+        <script src="script.js"> </script>
+    </body>
 
 
 
@@ -109,9 +113,9 @@
 <html>
 
 
-<!-- Who likes Comments -->
+    <!-- Who likes Comments -->
 
-<!-- 
+    <!-- 
 . The TitleCardContainer will display all of the prompts (TitleCards), one at a time. 
 . The Title cards will hold the questions and then be moved to the next prompt. 
 .
