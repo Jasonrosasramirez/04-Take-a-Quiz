@@ -127,7 +127,14 @@ function loopQuestions() {
     var questionElement = document.getElementById("question");
     questionElement.textContent = currentQuestion.title; // making questionElement manip. the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
 
+    currentQuestion.choices.forEach(function(choices, index){
+        var choiceButton = document.createElement("button"); 
+        choiceButton.setAttribute("class", choiceBtns); //references html and creates button 
+        choiceButton.setAttribute("value", choices);
+        choiceButton.textContent = index + 1 + choices;
+        
 
+    })
 }
    
 
