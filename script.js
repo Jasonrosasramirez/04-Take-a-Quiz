@@ -7,7 +7,7 @@ var invisibleScoreTotal = 100;
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
-var openingE1 = document.getElementById("opening");
+var openingE1 = document.getElementById("Opening");
 
 var beginTheQuizButtonE1 = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
 beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
@@ -46,12 +46,13 @@ var questionArryIndex = 0;
 // Below is where things start happening                                            Below are the essential functions
 
 
-function IamTheQuiz(){
+function IamTheQuiz() // The main loop. This is where the magic happens. 
+{
     
     countDownFunction();
     // loopQuestions();
 
-    //openingE1.setAttribute("class", "disappear");
+    openingE1.setAttribute("class", "disappear");
     var questionDivE1 = document.getElementById("questionDiv");
     questionDivE1.removeAttribute("class");
     
