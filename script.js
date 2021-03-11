@@ -47,6 +47,8 @@ function IamTheQuiz(){
 
     CountDownFunction();
     
+    loopQuestions();
+
     var firstTestButton = document.querySelector(".RightClass"); // this button is a place holder for the wide query selector that will cover an entire div. 
     var firstTestButtonAttribute = firstTestButton.getAttribute("class"); // checks to see if the right or wrong answer was selected
     firstTestButton.addEventListener('click', ScoreTrackingFunction); 
@@ -72,10 +74,6 @@ function IamTheQuiz(){
         
         
     } // Actions dependant on which button class is selected | RightClass, WrongClass, or SubmitButton
-
-
-
-
 
 
     // if the timer reaches 0 or the final submit is pressed, then initiate this function
