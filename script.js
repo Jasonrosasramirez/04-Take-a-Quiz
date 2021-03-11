@@ -7,6 +7,8 @@ var invisibleScoreTotal = 100;
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
+var openingE1 = document.getElementById("opening");
+
 var beginTheQuizButtonE1 = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
 beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
 
@@ -35,7 +37,7 @@ var quizQuestionsArray = [
         choices: ["A.JavaScript","B.Terminal/Bash", "C.For Loops", "D.Console Log"],  
         answer: "D.Console Log"
     }
-] // This array contains the question objects. I am important for showing up on screen :D
+] // This array contains the question objects. I am important for showing questions on screen :)
 
 var questionArryIndex = 0;
 
@@ -46,6 +48,17 @@ var questionArryIndex = 0;
 
 function IamTheQuiz(){
     
+    countDownFunction();
+    // loopQuestions();
+
+    //openingE1.setAttribute("class", "disappear");
+    var questionDivE1 = document.getElementById("questionDiv");
+    questionDivE1.removeAttribute("class");
+    
+}
+
+
+function countDownFunction() {
     setInterval(function(){ // iterates once every 1000 ms (or 1s) 
         countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
         countDownTimerID -= 1; 
@@ -55,10 +68,8 @@ function IamTheQuiz(){
         }
     }, 1000)
     console.log("The submit button was clicked");
-
-    loopQuestions();
-    
 }
+
 
 function loopQuestions() {   
     

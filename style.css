@@ -74,6 +74,6 @@ footer {
 }
 
 .disappear {
-    /*display: none; */ /* this will hide the question when the class is changed */ 
+    display: none; /* this will hide the question when the class is changed */ 
     border: 2px green dashed;
 }
