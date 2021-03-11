@@ -11,7 +11,8 @@ header p {
     border: 2px blue dashed;
 }
 
-.TitleCard {
+.TitleCard, 
+#questionDiv {
     width: 800px; 
     border: 2px blue dashed;
     border-radius: 6px;
@@ -37,9 +38,9 @@ header {
     border-bottom: 4px purple solid;
 }
 
-h3 {
-    width: 100px;
-    border-bottom: 3px black solid;
+footer { 
+    background-color: rgba(219, 206, 206, 0.829);
+    border-top: 5px purple solid;
 }
 
 .TimerDisplay {
@@ -53,41 +54,17 @@ h3 {
     margin-bottom: 10px;
 }
 
-.QuestionButton { 
-    height: 60px;
-    width: 150px;
-    border-radius: 6px;
-    margin: 5px;
-    color: white;
-    background-color: rgb(40, 110, 175);
-    box-shadow: inset 0 0 0 0 rgb(236, 177, 13);
-    transition: ease-out 0.3s;
-    font-size: 20px;
-    text-align: left;
-    
-    
-}
-
-.QuestionButton:hover { 
-    box-shadow: inset 160px 0 0 0 rgb(236, 177, 13);
-}
-
 
 .StartSubmitButton,
 .SubmitButton { 
     height: 50px;
     width: 150px;
-    border: none;
     color: black;
-    border-radius: 3px;
-    transition: ease-out 0.3s;
+    border-radius: 4px;
     font-size: 16px;
     outline: none;
     border: 3px solid #3fbb1f;
-    position: relative; /* This needs to be relative for the Z-Index */
-    z-index: 1;
-    margin: 5px;
-    
+    margin: 5px;   
 }
 
 .StartSubmitButton:hover,
@@ -95,7 +72,3 @@ h3 {
     color: #6dfb42;
 }
 
-
-.RightClass {
-    color: orange;
-}
