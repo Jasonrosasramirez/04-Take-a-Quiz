@@ -1,4 +1,5 @@
-// Variables and 
+// Variables and question array                                         Essential Definitions 
+
 
 var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
 var invisibleScoreTotal = 100;  
@@ -6,10 +7,9 @@ var invisibleScoreTotal = 100;
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
-var beginTheQuizButton = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
-beginTheQuizButton.addEventListener('click', IamTheQuiz);
+var beginTheQuizButtonE1 = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
+beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
 
-var questionArryIndex = 0;
 
 var quizQuestionsArray = [
     {
@@ -35,8 +35,13 @@ var quizQuestionsArray = [
         choices: ["A.JavaScript","B.Terminal/Bash", "C.For Loops", "D.Console Log"],  
         answer: "D.Console Log"
     }
-] // This array contains the question objects
+] // This array contains the question objects. I am important for showing up on screen :D
 
+var questionArryIndex = 0;
+
+
+
+// Below is where things start happening                                            Below are the essential functions
 
 
 function IamTheQuiz(){
@@ -55,16 +60,20 @@ function IamTheQuiz(){
     
 }
 
-function loopQuestions() {
+function loopQuestions() {   
+    
     var currentQuestion = quizQuestionsArray[questionArryIndex]; // References the object (element) within the array
     var questionElement = document.getElementById("question"); // References the H3 within the questionDiv ID
     questionElement.textContent = currentQuestion.title; // This makes questionElement manipulate the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
 
     currentQuestion.choices.forEach(function(choices, index){ // forEach works like a for loop. The choices parameter isn't the same as the choices key within the object array. 
+        
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions
         choiceButton.setAttribute("class", choiceBtns); // references html and creates button 
         choiceButton.setAttribute("value", choices); // 
         choiceButton.textContent = index + 1 + choices;
+
+
     })
 }
    

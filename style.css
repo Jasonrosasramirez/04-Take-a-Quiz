@@ -1,18 +1,19 @@
 /* the section below is for debugging */
 
 header,
-footer,
 .TitleCardContainer {
     border: 4px orange dashed;
 } 
 
 header h1,
+footer,
 header p {
     border: 2px blue dashed;
 }
 
 .TitleCard, 
 #questionDiv {
+    height: auto;
     width: 800px; 
     border: 2px blue dashed;
     border-radius: 6px;
@@ -72,3 +73,7 @@ footer {
     color: #6dfb42;
 }
 
+.disappear {
+    /*display: none; */ /* this will hide the question when the class is changed */ 
+    border: 2px green dashed;
+}
