@@ -94,12 +94,21 @@ function loopQuestions() {
         choiceButton.setAttribute("value", choices); // 
         choiceButton.textContent = index + 1 + choices;
         choiceButton.addEventListener("click", checkTheSelection); 
-        choicesE1.appendChild(choiceButton);
+        choicesE1.appendChild(choiceButton); // this adds the 4 options as the buttons. 
+        console.log("Hello! I am done. append child has been done");
+
+        console.log("and this is to go for the choiceButton _-_" + choiceButton);
     } )
 
     function checkTheSelection(event) {
         var buttonSelector = event.target;
+
+        console.log("This is the currentQuestion.title value: " + currentQuestion.title); // This works. Question presented 
+        console.log("This is the currentQuestion.answer value: " + currentQuestion.answer); // This works. Answer presented
+        console.log("I am daa the button selector value, mate: " + buttonSelector); // this comes back as [object HTMLButtonElement]
         
+        
+
         if (buttonSelector.textContent === currentQuestion.answer) {
             console.log("Right answer. This is the buttonSelector event.target" + buttonSelector);
             invisibleScore++;
@@ -108,9 +117,7 @@ function loopQuestions() {
         } else { 
             console.log("Wrong answer. This is the buttonSelector event.target ___" + buttonSelector);
             console.log("The wrong answer was selcted: Score is: ___ " + invisibleScore);
-
         }
-        
     }
 
 
