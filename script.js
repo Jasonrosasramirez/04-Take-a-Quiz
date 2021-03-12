@@ -16,9 +16,6 @@ var openingE1 = document.getElementById("opening"); // The first div car the qui
 var beginTheQuizButtonE1 = document.getElementById("StartSubmitButton"); // I am important for starting the quiz. I am within the opening id :)
 
 
-beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
-
-
 var quizQuestionsArray = [
     {
         title: "Commonly used data types DO NOT Include:", 
@@ -50,9 +47,12 @@ var invisibleScore = 0; // I am the most amount of points you can get in the qui
 var invisibleScoreTotal = 100;  
 var questionArryIndex = 0;
 
+beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
+
 
 
 // Below is where things start happening                                            Below are the essential functions
+
 
 
 function IamTheQuiz() // The main loop. This is where the magic happens. 
@@ -85,17 +85,35 @@ function loopQuestions() {
     var currentQuestion = quizQuestionsArray[questionArryIndex]; // References the object (element) within the array
     var questionElement = document.getElementById("question"); // References the H3 within the questionDiv ID
     questionElement.textContent = currentQuestion.title; // This makes questionElement manipulate the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
-    choicesE1.innerHTML = "";
+    choicesE1.innerHTML = " "; // Creates the empty space which will produce the buttons. This edits within the questionDiv of the HTML
 
-    currentQuestion.choices.forEach(function(choices, index){ // forEach works like a for loop. The choices parameter isn't the same as the choices key within the object array. 
+    currentQuestion.choices.forEach(function(choices, index) { 
         
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
         choiceButton.setAttribute("class", "choiceBtns"); // references html and updates 
         choiceButton.setAttribute("value", choices); // 
         choiceButton.textContent = index + 1 + choices;
-        choiceButton.addEventListener("click", console.log("look at me. I have been clicked within the loop questions function")); // currently a test to see if the button click is detected.
+        choiceButton.addEventListener("click", checkTheSelection); 
         choicesE1.appendChild(choiceButton);
-    })
+    } )
+
+    function checkTheSelection(event) {
+        var buttonSelector = event.target;
+        
+        if (buttonSelector.textContent === currentQuestion.answer) {
+            console.log("Right answer. This is the buttonSelector event.target" + buttonSelector);
+            invisibleScore++;
+            questionArryIndex++;
+            console.log("the right answer was selected. Score is: " + invisibleScore);
+        } else { 
+            console.log("Wrong answer. This is the buttonSelector event.target ___" + buttonSelector);
+            console.log("The wrong answer was selcted: Score is: ___ " + invisibleScore);
+
+        }
+        
+    }
+
+
 }
    
 

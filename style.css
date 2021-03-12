@@ -69,8 +69,9 @@ footer {
 }
 
 .StartSubmitButton:hover,
+.choiceBtns,
 .SubmitButton:hover { 
-    color: #6dfb42;
+    color: #2124c7;
 }
 
 .disappear {
