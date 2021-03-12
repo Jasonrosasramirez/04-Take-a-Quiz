@@ -6,16 +6,16 @@
 // Variables and question array                                         Essential Definitions 
 
 
-var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
-var invisibleScoreTotal = 100;  
-
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
-var openingE1 = document.getElementById("Opening");
-var choicesE1 = document.getElementById("choices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :) 
+var choicesE1 = document.getElementById("choices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
+var questionsDivE1 = document.getElementById("questionDiv");
+ 
+var openingE1 = document.getElementById("opening"); // The first div car the quiz taker sees. 
+var beginTheQuizButtonE1 = document.getElementById("StartSubmitButton"); // I am important for starting the quiz. I am within the opening id :)
 
-var beginTheQuizButtonE1 = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
+
 beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
 
 
@@ -45,6 +45,9 @@ var quizQuestionsArray = [
     }
 ] // This array contains the question objects. I am important for showing questions on screen :)
 
+
+var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
+var invisibleScoreTotal = 100;  
 var questionArryIndex = 0;
 
 
@@ -54,17 +57,13 @@ var questionArryIndex = 0;
 
 function IamTheQuiz() // The main loop. This is where the magic happens. 
 {
-    
+    console.log("The submit button was clicked. IamTheQuiz started");
     countDownFunction();
-    
 
     openingE1.setAttribute("class", "disappear");
-    var questionDivE1 = document.getElementById("questionDiv");
-    questionDivE1.removeAttribute("class");
+    questionsDivE1.removeAttribute("class");
  
-    // loopQuestions();
-
-
+    loopQuestions();
 }
 
 
@@ -77,7 +76,7 @@ function countDownFunction() {
             countDownTimerID = 180;
         }
     }, 1000)
-    console.log("The submit button was clicked");
+    console.log("The submit button was clicked. countDownFunction started");
 }
 
 
@@ -90,16 +89,13 @@ function loopQuestions() {
 
     currentQuestion.choices.forEach(function(choices, index){ // forEach works like a for loop. The choices parameter isn't the same as the choices key within the object array. 
         
-        var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions
-        choiceButton.setAttribute("class", "choiceBtns"); // references html and creates button variable, but this line does not generate anything by itself. 
+        var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
+        choiceButton.setAttribute("class", "choiceBtns"); // references html and updates 
         choiceButton.setAttribute("value", choices); // 
         choiceButton.textContent = index + 1 + choices;
-        choiceButton.addEventListener("click", console.log("hello. The choice button has been selected. "));
-
-
+        choiceButton.addEventListener("click", console.log("look at me. I have been clicked within the loop questions function")); // currently a test to see if the button click is detected.
+        choicesE1.appendChild(choiceButton);
     })
 }
    
-
-
 

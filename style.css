@@ -56,7 +56,7 @@ footer {
 }
 
 
-.StartSubmitButton,
+#StartSubmitButton,
 .SubmitButton { 
     height: 50px;
     width: 150px;
