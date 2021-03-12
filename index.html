@@ -11,13 +11,19 @@
     <head>
 
 
-    <body>
+    <body>       
+       
         <header>
             <h1> Hello! You're taking a quiz </h1>
             <div class="TimerDisplay">
                 <p> Time Remaining: <span id="countdownID">10</span> </p>
             </div>
         </header>
+
+        <div id ="highScore">
+            <h2> Initials: <span id="initialsID"> JRR </span> </h2>
+            <h2> Previous Score: <span id="previousScoreID"> 999% </span> </h2>
+        </div>
 
 
         <div class="TitleCardContainer">
@@ -34,17 +40,11 @@
                 <h3 id="question"></h3>
                 <div id="questionChoices" class="choiceBtns"> </div>
                 
-                <p id = "demo"> </p>
 
             </div>
 
-
-        <footer>
-            <h2> Initials: <span id="initialsID"> JRR </span> </h2>
-            <h2> Previous Score: <span id="previousScoreID"> 999% </span> </h2>
-        </footer>
-
-
+        </div>
+        
         <script src="script.js"> </script>
     </body>
 

@@ -39,8 +39,16 @@ var quizQuestionsArray = [
         title: "A very useful tool used during development and debugging for printing content debugger is: ", 
         choices: ["A.JavaScript","B.Terminal/Bash", "C.For Loops", "D.Console Log"],  
         answer: "D.Console Log"
+    },
+
+    {
+        title: "----+---+-- The results page! YAAY!", 
+        yourName: "name here",
+        yourScore: "a number"
+
     }
-] // This array contains the question objects. I am important for showing questions on screen :)
+
+] // This array contains the question objects. I am important for showing questions on screen :) 5 Elements in total. Index of 4 is the max 
 
 
 var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
@@ -106,27 +114,27 @@ function loopQuestions() {
 
     function checkTheSelection(event) {
         
+        
         var buttonSelector = event.target.textContent; // I display the text of the button (target) that was selected after an event (the click)
 
 
         if (buttonSelector === currentQuestion.answer) {
             invisibleScore += 20;
-
             console.log("Right answer. This is the buttonSelector event.target " + buttonSelector + "the score is: " + invisibleScore);
-            
         } else { 
+            
             console.log("Wrong answer. This is the buttonSelector event.target ___ " + buttonSelector + "the score is: " + invisibleScore);
         }
 
-        questionArryIndex += 1; 
-        console.log("question array index checkTheSelection " + questionArryIndex); 
-
-
+    
 // for tracking the answer and what has been clicked
         console.log("button selector " + buttonSelector);
         console.log("current question answer " + currentQuestion.answer);
 
-        IamTheQuiz();
+        questionArryIndex += 1; 
+        console.log("question array index checkTheSelection " + questionArryIndex);
+
+        IamTheQuiz(); // Starts the next series of questions :) 
     }
 
 
