@@ -64,6 +64,8 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
  
     loopQuestions();
+
+    console.log("question array index IamTheQuiz " + questionArryIndex);
 }
 
 
@@ -93,8 +95,8 @@ function loopQuestions() {
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
         choiceButton.setAttribute("class", "questionChoices"); // references html and updates 
         choiceButton.setAttribute("value", choices); // 
-        choiceButton.textContent = choices;     // This right here was causing the issues! <------+--------+--------+-- adding "index + 1 +" caused the display to mismatch 
-        choiceButton.addEventListener("click", checkTheSelection); 
+        choiceButton.textContent = choices;     // I create the button text that appears on screan. I am used alongside with buttonSelector within checkTheSelection()
+        choiceButton.addEventListener("click", checkTheSelection); // I trigger the checking function 
         choicesE1.appendChild(choiceButton); // this adds the 4 options as the buttons. 
         
         
@@ -103,22 +105,28 @@ function loopQuestions() {
 
 
     function checkTheSelection(event) {
-        //currentQuestion.title and .answer work - verified with console.log
-        var buttonSelector = event.target;
+        
+        var buttonSelector = event.target.textContent; // I display the text of the button (target) that was selected after an event (the click)
 
 
-        console.log("I am daa the button selector value, mate: " + buttonSelector); // this comes back as [object HTMLButtonElement]
-        console.log("---+-- button selector.textContent: " + buttonSelector.textContent); // 3C.Alerts
-        console.log("--+--+-- currentQuestion.answer: " + currentQuestion.answer); //C. Alerts
+        if (buttonSelector === currentQuestion.answer) {
+            invisibleScore += 20;
 
-
-        if (buttonSelector.textContent == currentQuestion.answer) {
-            console.log("Right answer. This is the buttonSelector event.target" + buttonSelector);
-            invisibleScore++;
-            questionArryIndex++;
+            console.log("Right answer. This is the buttonSelector event.target " + buttonSelector + "the score is: " + invisibleScore);
+            
         } else { 
-            console.log("Wrong answer. This is the buttonSelector event.target ___" + buttonSelector);
+            console.log("Wrong answer. This is the buttonSelector event.target ___ " + buttonSelector + "the score is: " + invisibleScore);
         }
+
+        questionArryIndex += 1; 
+        console.log("question array index checkTheSelection " + questionArryIndex); 
+
+
+// for tracking the answer and what has been clicked
+        console.log("button selector " + buttonSelector);
+        console.log("current question answer " + currentQuestion.answer);
+
+        IamTheQuiz();
     }
 
 
