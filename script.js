@@ -1,3 +1,8 @@
+
+// Project still not finished. Working to complete this (as of 11-Mar-2021)         <-------------
+
+
+
 // Variables and question array                                         Essential Definitions 
 
 
@@ -8,6 +13,7 @@ var countDownVariable = document.querySelector('#countdownID'); // I am importan
 var countDownTimerID = 180; 
 
 var openingE1 = document.getElementById("Opening");
+var choicesE1 = document.getElementById("choices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :) 
 
 var beginTheQuizButtonE1 = document.querySelector('.StartSubmitButton'); // I am important for starting the quiz :)
 beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
@@ -50,12 +56,15 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
 {
     
     countDownFunction();
-    // loopQuestions();
+    
 
     openingE1.setAttribute("class", "disappear");
     var questionDivE1 = document.getElementById("questionDiv");
     questionDivE1.removeAttribute("class");
-    
+ 
+    // loopQuestions();
+
+
 }
 
 
@@ -77,13 +86,15 @@ function loopQuestions() {
     var currentQuestion = quizQuestionsArray[questionArryIndex]; // References the object (element) within the array
     var questionElement = document.getElementById("question"); // References the H3 within the questionDiv ID
     questionElement.textContent = currentQuestion.title; // This makes questionElement manipulate the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
+    choicesE1.innerHTML = "";
 
     currentQuestion.choices.forEach(function(choices, index){ // forEach works like a for loop. The choices parameter isn't the same as the choices key within the object array. 
         
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions
-        choiceButton.setAttribute("class", choiceBtns); // references html and creates button 
+        choiceButton.setAttribute("class", "choiceBtns"); // references html and creates button variable, but this line does not generate anything by itself. 
         choiceButton.setAttribute("value", choices); // 
         choiceButton.textContent = index + 1 + choices;
+        choiceButton.addEventListener("click", console.log("hello. The choice button has been selected. "));
 
 
     })
