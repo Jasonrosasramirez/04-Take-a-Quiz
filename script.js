@@ -9,7 +9,7 @@
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 
-var choicesE1 = document.getElementById("choices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
+var choicesE1 = document.getElementById("questionChoices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
 var questionsDivE1 = document.getElementById("questionDiv");
  
 var openingE1 = document.getElementById("opening"); // The first div car the quiz taker sees. 
@@ -61,7 +61,7 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     countDownFunction();
 
     openingE1.setAttribute("class", "disappear");
-    questionsDivE1.removeAttribute("class");
+    questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
  
     loopQuestions();
 }
@@ -87,36 +87,37 @@ function loopQuestions() {
     questionElement.textContent = currentQuestion.title; // This makes questionElement manipulate the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
     choicesE1.innerHTML = " "; // Creates the empty space which will produce the buttons. This edits within the questionDiv of the HTML
 
+
     currentQuestion.choices.forEach(function(choices, index) { 
         
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
-        choiceButton.setAttribute("class", "choiceBtns"); // references html and updates 
+        choiceButton.setAttribute("class", "questionChoices"); // references html and updates 
         choiceButton.setAttribute("value", choices); // 
-        choiceButton.textContent = index + 1 + choices;
+        choiceButton.textContent = choices;     // This right here was causing the issues! <------+--------+--------+-- adding "index + 1 +" caused the display to mismatch 
         choiceButton.addEventListener("click", checkTheSelection); 
         choicesE1.appendChild(choiceButton); // this adds the 4 options as the buttons. 
-        console.log("Hello! I am done. append child has been done");
-
+        
+        
         console.log("and this is to go for the choiceButton _-_" + choiceButton);
     } )
 
+
     function checkTheSelection(event) {
+        //currentQuestion.title and .answer work - verified with console.log
         var buttonSelector = event.target;
 
-        console.log("This is the currentQuestion.title value: " + currentQuestion.title); // This works. Question presented 
-        console.log("This is the currentQuestion.answer value: " + currentQuestion.answer); // This works. Answer presented
-        console.log("I am daa the button selector value, mate: " + buttonSelector); // this comes back as [object HTMLButtonElement]
-        
-        
 
-        if (buttonSelector.textContent === currentQuestion.answer) {
+        console.log("I am daa the button selector value, mate: " + buttonSelector); // this comes back as [object HTMLButtonElement]
+        console.log("---+-- button selector.textContent: " + buttonSelector.textContent); // 3C.Alerts
+        console.log("--+--+-- currentQuestion.answer: " + currentQuestion.answer); //C. Alerts
+
+
+        if (buttonSelector.textContent == currentQuestion.answer) {
             console.log("Right answer. This is the buttonSelector event.target" + buttonSelector);
             invisibleScore++;
             questionArryIndex++;
-            console.log("the right answer was selected. Score is: " + invisibleScore);
         } else { 
             console.log("Wrong answer. This is the buttonSelector event.target ___" + buttonSelector);
-            console.log("The wrong answer was selcted: Score is: ___ " + invisibleScore);
         }
     }
 
