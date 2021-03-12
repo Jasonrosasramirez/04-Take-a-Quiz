@@ -66,7 +66,13 @@ beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
 function IamTheQuiz() // The main loop. This is where the magic happens. 
 {
     console.log("The submit button was clicked. IamTheQuiz started");
-    countDownFunction();
+
+    var countMeIn = 0; 
+    if (countMeIn === 0) {
+        countDownFunction();
+        countMeIn += 1;
+    } // The timer function will onlu be called once during the quiz. Without this, the timer function keeps getting called and accelerates the timer per click. 
+    
 
     openingE1.setAttribute("class", "disappear");
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
@@ -86,7 +92,7 @@ function countDownFunction() {
             countDownTimerID = 180;
         }
     }, 1000)
-    console.log("The submit button was clicked. countDownFunction started");
+
 }
 
 
@@ -98,7 +104,7 @@ function loopQuestions() {
     choicesE1.innerHTML = " "; // Creates the empty space which will produce the buttons. This edits within the questionDiv of the HTML
 
 
-    currentQuestion.choices.forEach(function(choices, index) { 
+    currentQuestion.choices.forEach(function(choices) { 
         
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
         choiceButton.setAttribute("class", "questionChoices"); // references html and updates 
