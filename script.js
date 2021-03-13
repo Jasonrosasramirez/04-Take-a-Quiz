@@ -6,7 +6,7 @@
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 var countMeIn = 0; 
-var countDownWrongAnswerPenalty = 10
+var countDownWrongAnswerPenalty = 10;
 
 var choicesE1 = document.getElementById("questionChoices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
 var questionsDivE1 = document.getElementById("questionDiv");
@@ -71,7 +71,7 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
 
 
-    if (questionArryIndex < 4) // only loop the questions so long as the index is below 4. Index 0 - 3.
+    if (questionArryIndex < 4 && countDownTimerID > 0) // only loop the questions so long as the index is below 4. Index 0 - 3.
     {
         loopQuestions();
     } 
@@ -86,16 +86,20 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
 }
 
 
+
+
 function countDownFunction() {
     setInterval(function(){ // iterates once every 1000 ms (or 1s) 
         countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
         countDownTimerID -= 1; 
         if (countDownTimerID <= 0) {
-            alert("Hey! Time is up. Show the results screen");
+            alert("Hey! Time is up.");
             countDownTimerID = 180;
         }
     }, 1000)
 }
+
+
 
 
 function loopQuestions() {   
@@ -137,6 +141,9 @@ function loopQuestions() {
     }
 }
    
+
+
+
 
 function resultsPageFunction() {
     console.log("resultsPageFunction has been activated. index at " + questionArryIndex);
