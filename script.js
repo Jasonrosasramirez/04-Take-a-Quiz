@@ -9,6 +9,7 @@
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
 var countMeIn = 0; 
+var countDownWrongAnswerPenalty = 10
 
 var choicesE1 = document.getElementById("questionChoices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
 var questionsDivE1 = document.getElementById("questionDiv");
@@ -73,18 +74,18 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
 
 
-    if (questionArryIndex < 4) {
+    if (questionArryIndex < 4) // only loop the questions so long as the index is below 4. Index 0 - 3.
+    {
         loopQuestions();
-    } else {
-        questionsDivE1.setAttribute("class", "disappear"); 
-        var checkOnMe = questionsDivE1.getAttribute("class");  
+    } 
 
-        console.log("WWWho has their class set?" + checkOnMe); 
+// Begin the results phase 
+    else { // Index 4, all of the questions are done. Bring on the results page. 
+        questionsDivE1.setAttribute("class", "disappear"); // Makes the question section disapear once all of the questions are through. 
+        highScoreDivE1.removeAttribute("class");
 
         resultsPageFunction();
     }
-
-    console.log("question array index IamTheQuiz " + questionArryIndex);
 }
 
 
@@ -128,7 +129,7 @@ function loopQuestions() {
             invisibleScore += 20;
             console.log("Right answer. This is the buttonSelector event.target " + buttonSelector + "the score is: " + invisibleScore);
         } else { 
-            
+            countDownTimerID -= countDownWrongAnswerPenalty;
             console.log("Wrong answer. This is the buttonSelector event.target ___ " + buttonSelector + "the score is: " + invisibleScore);
         }
     
