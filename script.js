@@ -75,9 +75,6 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     {
         loopQuestions();
     } else {
-        questionsDivE1.setAttribute("class", "disappear"); // Makes the question section disapear once all of the questions are through. 
-        highScoreDivE1.removeAttribute("class");
-
         resultsPageFunction();
     }
 
@@ -91,8 +88,9 @@ function countDownFunction() {
         countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
         countDownTimerID -= 1; 
         if (countDownTimerID <= 0) {
-            alert("Hey! Time is up.");
-            countDownTimerID = 180;
+            resultsPageFunction(); // When time is up, the results page will be loaded up. 
+            // return;
+            countDownTimerID = 60;
         }
     }, 1000)
 }
@@ -144,8 +142,14 @@ function loopQuestions() {
 
 
 function resultsPageFunction() {
+    questionsDivE1.setAttribute("class", "disappear"); // Makes the question section disapear once all of the questions are through. 
+    highScoreDivE1.removeAttribute("class");
     console.log("resultsPageFunction has been activated. index at " + questionArryIndex);
     console.log("Invisible score " + invisibleScore);
     scoreOfQuizIDE1.innerHTML = invisibleScore;
+
+    if (countDownTimerID = 0) {
+        alert("Hey! Time is up.");
+    }
 
 }
