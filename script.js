@@ -15,6 +15,10 @@ var questionsDivE1 = document.getElementById("questionDiv");
 var openingE1 = document.getElementById("opening"); // The first div car the quiz taker sees. 
 var beginTheQuizButtonE1 = document.getElementById("StartSubmitButton"); // I am important for starting the quiz. I am within the opening id :)
 
+var highScoreDivE1 = document.getElementById("highScoreDiv");
+var initialsIDE1 = document.getElementById("initialsID");
+var previousScoreIDE1 = document.getElementById("previousScoreID");
+
 
 var quizQuestionsArray = [
     {
@@ -39,13 +43,6 @@ var quizQuestionsArray = [
         title: "A very useful tool used during development and debugging for printing content debugger is: ", 
         choices: ["A.JavaScript","B.Terminal/Bash", "C.For Loops", "D.Console Log"],  
         answer: "D.Console Log"
-    },
-
-    {
-        title: "----+---+-- The results page! YAAY!", 
-        yourName: "name here",
-        yourScore: "a number"
-
     }
 
 ] // This array contains the question objects. I am important for showing questions on screen :) 5 Elements in total. Index of 4 is the max 
@@ -69,7 +66,7 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
 
     var countMeIn = 0; 
     if (countMeIn === 0) {
-        countDownFunction();
+        countDownFunction(); // I am the timer :D 
         countMeIn += 1;
     } // The timer function will onlu be called once during the quiz. Without this, the timer function keeps getting called and accelerates the timer per click. 
     

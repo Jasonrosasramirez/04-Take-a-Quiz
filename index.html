@@ -20,28 +20,30 @@
             </div>
         </header>
 
-        <div id ="highScore">
-            <h2> Initials: <span id="initialsID"> JRR </span> </h2>
-            <h2> Previous Score: <span id="previousScoreID"> 999% </span> </h2>
-        </div>
-
 
         <div class="TitleCardContainer">
+
+        <!-- This is the greating and where the first button is pressed -->
             <div class="TitleCard" id="opening">
                 <h2> Coding Quiz Challenge </h2>
                 <p> Try to answer the following code related questions within the time limit. <p>
                 <button type="button" id="StartSubmitButton"> Click me to start the Quiz </button>
             </div>
 
-
-            <!-- Added in with tutor - Section below is referenced with object array -->
-           
+        <!-- This questiop displays the question array. Index 0 - 3 -->
             <div id="questionDiv" class="disappear">
                 <h3 id="question"></h3>
                 <div id="questionChoices" class="choiceBtns"> </div>
                 
 
             </div>
+
+        <!-- This section is for the results card page after everything else has been completed. Index Index 4 -->
+            <div class = "disappear" id ="highScoreDiv" > 
+                <h2> Initials: <span id="initialsID"> JRR </span> </h2>
+                <h2> Previous Score: <span id="previousScoreID"> 999% </span> </h2>
+            </div>
+
 
         </div>
         
