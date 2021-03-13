@@ -8,6 +8,7 @@
 
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
 var countDownTimerID = 180; 
+var countMeIn = 0; 
 
 var choicesE1 = document.getElementById("questionChoices"); // references #choices within the questionDiv. I am important for displaying the questions on screen :)
 var questionsDivE1 = document.getElementById("questionDiv");
@@ -64,17 +65,21 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
 {
     console.log("The submit button was clicked. IamTheQuiz started");
 
-    var countMeIn = 0; 
     if (countMeIn === 0) {
-        countDownFunction(); // I am the timer :D 
         countMeIn += 1;
+        countDownFunction(); // I am the timer :D 
     } // The timer function will onlu be called once during the quiz. Without this, the timer function keeps getting called and accelerates the timer per click. 
-    
+
 
     openingE1.setAttribute("class", "disappear");
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
- 
-    loopQuestions();
+
+
+    if (questionArryIndex < 4) {
+        loopQuestions();
+    } else {
+        resultsPageFunction();
+    }
 
     console.log("question array index IamTheQuiz " + questionArryIndex);
 }
@@ -89,7 +94,7 @@ function countDownFunction() {
             countDownTimerID = 180;
         }
     }, 1000)
-
+    console.log("____=___count down function triggered. countMeIn at: " + countMeIn);
 }
 
 
@@ -114,12 +119,8 @@ function loopQuestions() {
         console.log("and this is to go for the choiceButton _-_" + choiceButton);
     } )
 
-
     function checkTheSelection(event) {
-        
-        
         var buttonSelector = event.target.textContent; // I display the text of the button (target) that was selected after an event (the click)
-
 
         if (buttonSelector === currentQuestion.answer) {
             invisibleScore += 20;
@@ -128,7 +129,6 @@ function loopQuestions() {
             
             console.log("Wrong answer. This is the buttonSelector event.target ___ " + buttonSelector + "the score is: " + invisibleScore);
         }
-
     
 // for tracking the answer and what has been clicked
         console.log("button selector " + buttonSelector);
@@ -140,7 +140,11 @@ function loopQuestions() {
         IamTheQuiz(); // Starts the next series of questions :) 
     }
 
-
 }
    
 
+function resultsPageFunction() {
+    console.log("-_---+-- resultsPageFunction has been activated. index at " + questionArryIndex);
+
+
+}
