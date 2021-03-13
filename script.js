@@ -87,9 +87,6 @@ function countDownFunction() {
     setInterval(function(){ // iterates once every 1000 ms (or 1s) 
         countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
         
-
-// work on this here to stop counting when the array is done
-
         if (countDownTimerID <= 0 || questionArryIndex >= 4) {
             resultsPageFunction(); // When time is up, the results page will be loaded up. 
         } else{
