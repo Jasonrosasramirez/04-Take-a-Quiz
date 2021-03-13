@@ -4,7 +4,7 @@
 
 
 var countDownVariable = document.querySelector('#countdownID'); // I am important for keeping track of time :) 
-var countDownTimerID = 180; 
+var countDownTimerID = 60; 
 var countMeIn = 0; 
 var countDownWrongAnswerPenalty = 10;
 
@@ -71,18 +71,16 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
 
 
-    if (questionArryIndex < 4 && countDownTimerID > 0) // only loop the questions so long as the index is below 4. Index 0 - 3.
+    if (questionArryIndex < 4) // only loop the questions so long as the index is below 4. Index 0 - 3.
     {
         loopQuestions();
-    } 
-
-// Begin the results phase 
-    else { // Index 4, all of the questions are done. Bring on the results page. 
+    } else {
         questionsDivE1.setAttribute("class", "disappear"); // Makes the question section disapear once all of the questions are through. 
         highScoreDivE1.removeAttribute("class");
 
         resultsPageFunction();
     }
+
 }
 
 

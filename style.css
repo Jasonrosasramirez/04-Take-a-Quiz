@@ -1,6 +1,7 @@
 /* the section below is for debugging */
 
 header,
+footer,
 .TitleCardContainer {
     border: 4px orange dashed;
 } 
@@ -29,6 +30,12 @@ header {
     border-bottom: 4px purple solid;
 }
 
+
+footer {
+    margin-top: 20px;
+    border-top: 4px purple solid;
+}
+
 #highScoreDiv h2 {
     width: 300px;
     border-bottom: 4px purple solid;
@@ -48,6 +55,7 @@ header {
 }
 
 .TitleCardContainer {
+    height: 300px;
     padding: 10px;
     margin-bottom: 10px;
     align-items: center;
