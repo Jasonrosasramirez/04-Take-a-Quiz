@@ -53,13 +53,11 @@ var invisibleScore = 0; // I am the most amount of points you can get in the qui
 var invisibleScoreTotal = 100;  
 var questionArryIndex = 0;
 
-beginTheQuizButtonE1.addEventListener('click', IamTheQuiz);
-
-
 
 // Below is where things start happening                                            Below are the essential functions
 
 
+beginTheQuizButtonE1.addEventListener('click', IamTheQuiz); // Click on me to begin the magic :D 
 
 function IamTheQuiz() // The main loop. This is where the magic happens. 
 {
@@ -70,14 +68,19 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
         countDownFunction(); // I am the timer :D 
     } // The timer function will onlu be called once during the quiz. Without this, the timer function keeps getting called and accelerates the timer per click. 
 
-
-    openingE1.setAttribute("class", "disappear");
+// Begin the quiestions phase 
+    openingE1.setAttribute("class", "disappear"); // this hides the opening title card
     questionsDivE1.removeAttribute("class"); // this will display the question prompts only 
 
 
     if (questionArryIndex < 4) {
         loopQuestions();
     } else {
+        questionsDivE1.setAttribute("class", "disappear"); 
+        var checkOnMe = questionsDivE1.getAttribute("class");  
+
+        console.log("WWWho has their class set?" + checkOnMe); 
+
         resultsPageFunction();
     }
 
@@ -94,7 +97,6 @@ function countDownFunction() {
             countDownTimerID = 180;
         }
     }, 1000)
-    console.log("____=___count down function triggered. countMeIn at: " + countMeIn);
 }
 
 
