@@ -29,6 +29,12 @@ header {
     border-bottom: 4px purple solid;
 }
 
+#highScoreDiv h2 {
+    width: 300px;
+    border-bottom: 4px purple solid;
+
+}
+
 #highScore { 
     background-color: rgba(255, 248, 248, 0.925);
     border-bottom: 5px purple solid;

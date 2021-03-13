@@ -17,6 +17,10 @@ var beginTheQuizButtonE1 = document.getElementById("StartSubmitButton"); // I am
 var highScoreDivE1 = document.getElementById("highScoreDiv");
 var scoreOfQuizIDE1 = document.getElementById("scoreOfQuizID");
 
+var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
+var invisibleScoreTotal = 100;  
+var scoreOfQuizIDE1 = document.getElementById("scoreOfQuizID"); // display of quiz score
+
 
 var quizQuestionsArray = [
     {
@@ -34,7 +38,7 @@ var quizQuestionsArray = [
     {
         title: "The condition in an if/else statement is enclosed with ______", 
         choices: ["A.Quotes","B.Curly Braces", "C.Parentheses", "D.Square Brackets"],  
-        answer: "B.Curly Braces"
+        answer: "C.Parentheses"
     },
 
     {
@@ -45,9 +49,6 @@ var quizQuestionsArray = [
 
 ] // This array contains the question objects. I am important for showing questions on screen :) 5 Elements in total. Index of 4 is the max 
 
-
-var invisibleScore = 0; // I am the most amount of points you can get in the quiz :)
-var invisibleScoreTotal = 100;  
 var questionArryIndex = 0;
 
 
@@ -124,7 +125,7 @@ function loopQuestions() {
 
         if (buttonSelector === currentQuestion.answer) {
             //This checks to see if the button selected is the same as the currentQuestion.answer which is getting back the key of the array.  
-            invisibleScore += 20;
+            invisibleScore += 25;
         } else { 
             countDownTimerID -= countDownWrongAnswerPenalty;
         }
@@ -139,6 +140,7 @@ function loopQuestions() {
 
 function resultsPageFunction() {
     console.log("resultsPageFunction has been activated. index at " + questionArryIndex);
-
+    console.log("Invisible score " + invisibleScore);
+    scoreOfQuizIDE1.innerHTML = invisibleScore;
 
 }
