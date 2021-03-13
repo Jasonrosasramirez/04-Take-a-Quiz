@@ -91,8 +91,6 @@ function countDownFunction() {
         
         if (countDownTimerID <= 0) {
             resultsPageFunction(); // When time is up, the results page will be loaded up. 
-            // return;
-            //countDownTimerID = 60;
         } else{
             countDownTimerID -= 1;
         }
@@ -153,6 +151,6 @@ function resultsPageFunction() {
     console.log("Invisible score " + invisibleScore);
     scoreOfQuizIDE1.innerHTML = invisibleScore;
 
-    
+
 
 }
