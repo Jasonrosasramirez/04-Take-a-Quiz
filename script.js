@@ -1,7 +1,4 @@
 
-// Project still not finished. Working to complete this (as of 11-Mar-2021)         <-------------
-
-
 
 // Variables and question array                                         Essential Definitions 
 
@@ -18,8 +15,7 @@ var openingE1 = document.getElementById("opening"); // The first div car the qui
 var beginTheQuizButtonE1 = document.getElementById("StartSubmitButton"); // I am important for starting the quiz. I am within the opening id :)
 
 var highScoreDivE1 = document.getElementById("highScoreDiv");
-var initialsIDE1 = document.getElementById("initialsID");
-var previousScoreIDE1 = document.getElementById("previousScoreID");
+var scoreOfQuizIDE1 = document.getElementById("scoreOfQuizID");
 
 
 var quizQuestionsArray = [
@@ -102,7 +98,8 @@ function countDownFunction() {
 
 
 function loopQuestions() {   
-    
+// This function loops through the questions and populates the questions. 
+
     var currentQuestion = quizQuestionsArray[questionArryIndex]; // References the object (element) within the array
     var questionElement = document.getElementById("question"); // References the H3 within the questionDiv ID
     questionElement.textContent = currentQuestion.title; // This makes questionElement manipulate the DOM and setting that change/edit equal to the current object title (currentQuestion.title)
@@ -113,41 +110,35 @@ function loopQuestions() {
         
         var choiceButton = document.createElement("button"); // This variable containes the button for submitting the questions. but this line does not generate anything by itself. This references the titlecard div 
         choiceButton.setAttribute("class", "questionChoices"); // references html and updates 
-        choiceButton.setAttribute("value", choices); // 
-        choiceButton.textContent = choices;     // I create the button text that appears on screan. I am used alongside with buttonSelector within checkTheSelection()
+        choiceButton.setAttribute("value", choices);  
+        choiceButton.textContent = choices; // I create the button text that appears on screan. I am used alongside with buttonSelector within checkTheSelection()
         choiceButton.addEventListener("click", checkTheSelection); // I trigger the checking function 
-        choicesE1.appendChild(choiceButton); // this adds the 4 options as the buttons. 
-        
-        
-        console.log("and this is to go for the choiceButton _-_" + choiceButton);
+        choicesE1.appendChild(choiceButton); // this adds the 4 options as the buttons.
+
     } )
 
     function checkTheSelection(event) {
+        // This function is what checks the button choice and adds up the score.  
+        
         var buttonSelector = event.target.textContent; // I display the text of the button (target) that was selected after an event (the click)
 
         if (buttonSelector === currentQuestion.answer) {
+            //This checks to see if the button selected is the same as the currentQuestion.answer which is getting back the key of the array.  
             invisibleScore += 20;
-            console.log("Right answer. This is the buttonSelector event.target " + buttonSelector + "the score is: " + invisibleScore);
         } else { 
             countDownTimerID -= countDownWrongAnswerPenalty;
-            console.log("Wrong answer. This is the buttonSelector event.target ___ " + buttonSelector + "the score is: " + invisibleScore);
         }
     
-// for tracking the answer and what has been clicked
-        console.log("button selector " + buttonSelector);
-        console.log("current question answer " + currentQuestion.answer);
-
+    // for tracking the answer and what has been clicked
         questionArryIndex += 1; 
         console.log("question array index checkTheSelection " + questionArryIndex);
-
         IamTheQuiz(); // Starts the next series of questions :) 
     }
-
 }
    
 
 function resultsPageFunction() {
-    console.log("-_---+-- resultsPageFunction has been activated. index at " + questionArryIndex);
+    console.log("resultsPageFunction has been activated. index at " + questionArryIndex);
 
 
 }
