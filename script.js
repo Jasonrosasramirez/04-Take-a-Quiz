@@ -86,12 +86,17 @@ function IamTheQuiz() // The main loop. This is where the magic happens.
 function countDownFunction() {
     setInterval(function(){ // iterates once every 1000 ms (or 1s) 
         countDownVariable.innerHTML = countDownTimerID ; // innerHTML specifies rge HTML content of a variable. This links the variable to the HTML
-        countDownTimerID -= 1; 
+        
+         
+        
         if (countDownTimerID <= 0) {
             resultsPageFunction(); // When time is up, the results page will be loaded up. 
             // return;
-            countDownTimerID = 60;
+            //countDownTimerID = 60;
+        } else{
+            countDownTimerID -= 1;
         }
+
     }, 1000)
 }
 
@@ -148,8 +153,6 @@ function resultsPageFunction() {
     console.log("Invisible score " + invisibleScore);
     scoreOfQuizIDE1.innerHTML = invisibleScore;
 
-    if (countDownTimerID = 0) {
-        alert("Hey! Time is up.");
-    }
+    
 
 }
