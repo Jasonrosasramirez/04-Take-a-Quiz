@@ -159,9 +159,10 @@ function resultsPageFunction() {
 submitInitialsButtonE1.addEventListener('click', function(event) {
     event.preventDefault();
 
-    var initialsVariable = document.getElementById("initials").value;
+    var postFooterInitials = document.getElementById("initials").value;
 
-    localStorage.setItem("initials", initialsVariable);
+    localStorage.setItem("initials", postFooterInitials);
+    localStorage.setItem("littleScoreID", invisibleScore);
 
     renderPreviousResultsFunction(); // goes to the section that displays the stored local variables
 });
