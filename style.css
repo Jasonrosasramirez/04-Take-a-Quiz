@@ -4,43 +4,20 @@
 }
 
 
-
-
-/* the section below is for debugging */
-
-header,
-footer,
-.TitleCardContainer {
-    border: 4px orange dashed;
-} 
-
-#highScore,
-header p {
-    border: 2px blue dashed;
-}
-
-.TitleCard, 
-#questionDiv {
-    height: auto;
-    width: auto; 
-    border: 2px blue dashed;
-    border-radius: 6px;
-} 
-
-
 /* Setting up the Style below */
 
 body { 
     background-color: rgb(252, 245, 238);
+    padding: 20px;
 
 }
 
 header {
-    margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
-    padding: 5px;
     border-bottom: 4px var(--purpleHighlightingTone) solid;
+    padding: 5px;
+    margin-bottom: 25px;
 }
 
 .TimerDisplay {
@@ -61,7 +38,6 @@ footer {
 }
 
 .TimerDisplay {
-    border: 2px green dashed;
     display: flex;
     justify-content: space-around;
 }
@@ -101,8 +77,8 @@ footer {
 
 #littleInitialID, 
 #littleScoreID { 
-
     background-color: var(--purpleHighlightingTone);
+    opacity: 0.9;
 }
 
 .disappear {

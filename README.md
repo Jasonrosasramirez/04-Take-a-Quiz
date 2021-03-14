@@ -97,3 +97,6 @@ You are required to submit BOTH of the following for review:
 ## References 
 
 https://www.w3schools.com/js/js_array_iteration.asp
+
+https://www.w3.org/Style/Examples/007/fonts.en.html
+
