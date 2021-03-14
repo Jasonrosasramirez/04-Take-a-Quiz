@@ -24,7 +24,7 @@ var scoreOfQuizIDE1 = document.getElementById("scoreOfQuizID"); // display of qu
 
 var quizQuestionsArray = [
     {
-        title: "Commonly used data types DO NOT Include:", 
+        title: "Commonly used data types DO NOT Include ______", 
         choices: ["A.Strings","B.Booleans", "C.Alerts", "D.Numbers"],  
         answer: "C.Alerts"
     },
@@ -42,7 +42,7 @@ var quizQuestionsArray = [
     },
 
     {
-        title: "A very useful tool used during development and debugging for printing content debugger is: ", 
+        title: "A very useful tool used during development and debugging for printing content debugger is ______ ", 
         choices: ["A.JavaScript","B.Terminal/Bash", "C.For Loops", "D.Console Log"],  
         answer: "D.Console Log"
     }

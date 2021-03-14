@@ -1,11 +1,20 @@
 h1 {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
     size: 30px;
 }
 
 h2 {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
     size: 20px; 
 }
 
-p {
-    size: 15px;
+h3 {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    size: 18px;
+}
+
+
+label, p {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    size: 16px;
 }

@@ -1,3 +1,11 @@
+:root { 
+    --purpleHighlightingTone: rgb(180, 173, 245); 
+    
+}
+
+
+
+
 /* the section below is for debugging */
 
 header,
@@ -14,7 +22,7 @@ header p {
 .TitleCard, 
 #questionDiv {
     height: auto;
-    width: 800px; 
+    width: auto; 
     border: 2px blue dashed;
     border-radius: 6px;
 } 
@@ -22,30 +30,34 @@ header p {
 
 /* Setting up the Style below */
 
+body { 
+    background-color: rgb(252, 245, 238);
+
+}
+
 header {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    border-bottom: 4px purple solid;
+    border-bottom: 4px var(--purpleHighlightingTone) solid;
 }
 
+.TimerDisplay {
+    color: red;
+    font-size: 22px;
+    font-weight: bolder;
+}
 
 footer {
     margin-top: 20px;
-    border-top: 4px purple solid;
+    border-top: 4px var(--purpleHighlightingTone) solid;
 }
 
 #highScoreDiv h2 {
     width: 300px;
-    border-bottom: 4px purple solid;
+    border-bottom: 4px var(--purpleHighlightingTone) solid;
 
-}
-
-#highScore { 
-    background-color: rgba(255, 248, 248, 0.925);
-    border-bottom: 5px purple solid;
-    margin-bottom: 10px;
 }
 
 .TimerDisplay {
@@ -56,10 +68,12 @@ footer {
 
 .TitleCardContainer {
     height: 300px;
-    padding: 10px;
+    padding: 40px;
     margin-bottom: 10px;
     align-items: center;
     float: center;
+    border-left: 4px var(--purpleHighlightingTone) solid;
+    border-right: 4px var(--purpleHighlightingTone) solid;
 }
 
 
@@ -78,6 +92,13 @@ footer {
 .questionChoices:hover,
 #StartSubmitButton:hover { 
     color: #2124c7;
+}
+
+
+#littleInitialID, 
+#littleScoreID { 
+
+    background-color: var(--purpleHighlightingTone);
 }
 
 .disappear {
