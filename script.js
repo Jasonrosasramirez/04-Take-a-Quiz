@@ -153,11 +153,23 @@ function resultsPageFunction() {
     console.log("Invisible score " + invisibleScore);
     scoreOfQuizIDE1.innerHTML = invisibleScore;
 
-    submitInitialsButtonE1.addEventListener('click', renderPreviousResultsFunction);
+    
 }
 
-function renderPreviousResultsFunction() {
-    window.alert("look who made it");
-    console.log("render previous results function");
+submitInitialsButtonE1.addEventListener('click', renderPreviousResultsFunction);
 
+// This triggers once the quiz is over and the submit initials button is clicked
+function renderPreviousResultsFunction() {
+    
+    event.preventDefault();
+
+
+
+
+    var postFooterInitials = localStorage.getItem("initials"); //Initials is the ID of the form text input by the user
+
+    littleInitialIDE1.textContent = postFooterInitials; // appears within footer variabletext.theText = what I want it to display 
+    littleScoreIDE1.textContent = invisibleScore + "%";
+
+    window.alert("look who made it");
 }
