@@ -54,7 +54,8 @@ footer {
 
 
 .questionChoices,
-#StartSubmitButton { 
+#StartSubmitButton, 
+#submitInitialsButton { 
     height: 50px;
     width: 150px;
     color: black;
@@ -67,7 +68,8 @@ footer {
 }
 
 .questionChoices:hover,
-#StartSubmitButton:hover { 
+#StartSubmitButton:hover,
+#submitInitialsButton:hover { 
     color: var(--redDisplayTone);
 }
 

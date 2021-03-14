@@ -42,20 +42,24 @@
                 <h3> Previous Score: <span id="scoreOfQuizID">99%</span>% </h3>
 
                 <h2>Submit Your Initials</h2>
-                <form>
+
+                <form method="POST"> <!--I will be used for local storage-->
+                    <!-- User input initials -->
                     <label for="initials">Enter Here</label>
                     <input type="text" id="initials" name="initials">
+
+                    <!-- button to submit initials and score -->
+                    <button type="button" id="submitInitialsButton"> Submit Initials </button>
                 </form>
+
             </div>
 
         </div>
         
-        <footer>
+        <footer> <!-- I will display local storage -->
             <h2>The Previous Score</h2>
             <h3>Initials: <span id="littleInitialID"> placeholder Initial </span></h3>
             <h3>Score: <span id="littleScoreID"> placeholder Score </span></h3>
-
-
         </footer>
 
         <script src="script.js"> </script>

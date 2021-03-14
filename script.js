@@ -51,6 +51,10 @@ var quizQuestionsArray = [
 
 var questionArryIndex = 0;
 
+var initialsE1 = document.getElementById("initials"); // used in local storage. The user types their initials into this text input form 
+var littleInitialIDE1 = document.getElementById("littleInitialID"); // displays initials in the footer
+var littleScoreIDE1 = document.getElementById("littleScoreID"); // should display invisibleScore in the footer 
+
 
 // Below is where things start happening                                            Below are the essential functions
 
