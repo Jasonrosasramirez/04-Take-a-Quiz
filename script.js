@@ -159,23 +159,22 @@ function resultsPageFunction() {
 submitInitialsButtonE1.addEventListener('click', function(event) {
     event.preventDefault();
 
-    var postFooterInitials = document.getElementById("initials").value;
+    var postFooterInitials22 = document.getElementById("initials").value; //Initials is the ID of the form text input by the user
 
-    localStorage.setItem("initials", postFooterInitials);
+    localStorage.setItem("initials", postFooterInitials22);
     localStorage.setItem("littleScoreID", invisibleScore);
 
-    renderPreviousResultsFunction(); // goes to the section that displays the stored local variables
-});
-    
-    
+    console.log("---+--+-- the click. PostFinitials22: " + postFooterInitials22 + typeof(postFooterInitials22));
 
-// This displays things to the bottom footer
-function renderPreviousResultsFunction() {
-    
     var postFooterInitials = localStorage.getItem("initials"); //Initials is the ID of the form text input by the user
 
     littleInitialIDE1.textContent = postFooterInitials; // appears within footer variabletext.theText = what I want it to display 
     littleScoreIDE1.textContent = invisibleScore + "%";
 
-    window.alert("look who made it");
-}
+    window.alert("You are all done, " + postFooterInitials22 + "\nRestart the quiz :)");
+
+    console.log("the end. PostFinitials: " + postFooterInitials + typeof(postFooterInitials));
+});
+    
+    
+
