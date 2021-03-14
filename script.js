@@ -54,7 +54,7 @@ var questionArryIndex = 0;
 var initialsE1 = document.getElementById("initials"); // used in local storage. The user types their initials into this text input form 
 var littleInitialIDE1 = document.getElementById("littleInitialID"); // displays initials in the footer
 var littleScoreIDE1 = document.getElementById("littleScoreID"); // should display invisibleScore in the footer 
-
+var submitInitialsButtonE1 = document.getElementById("submitInitialsButton");
 
 // Below is where things start happening                                            Below are the essential functions
 
@@ -153,6 +153,11 @@ function resultsPageFunction() {
     console.log("Invisible score " + invisibleScore);
     scoreOfQuizIDE1.innerHTML = invisibleScore;
 
+    submitInitialsButtonE1.addEventListener('click', renderPreviousResultsFunction);
+}
 
+function renderPreviousResultsFunction() {
+    window.alert("look who made it");
+    console.log("render previous results function");
 
 }
