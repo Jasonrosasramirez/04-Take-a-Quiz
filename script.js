@@ -159,21 +159,17 @@ function resultsPageFunction() {
 submitInitialsButtonE1.addEventListener('click', function(event) {
     event.preventDefault();
 
-    var postFooterInitials22 = document.getElementById("initials").value; //Initials is the ID of the form text input by the user
+    //references what is typed into the text input. So this captures that in the form of a variable
+    var postFooterInitials = document.getElementById("initials").value; //Initials is the ID of the form text input by the user. 
 
-    localStorage.setItem("initials", postFooterInitials22);
-    localStorage.setItem("littleScoreID", invisibleScore);
-
-    console.log("---+--+-- the click. PostFinitials22: " + postFooterInitials22 + typeof(postFooterInitials22));
-
-    var postFooterInitials = localStorage.getItem("initials"); //Initials is the ID of the form text input by the user
+    localStorage.setItem("initials", postFooterInitials); // stores the userinitials when the webpage reloads
+    localStorage.setItem("littleScoreID", invisibleScore); // stores the user score when the webpage reloads
 
     littleInitialIDE1.textContent = postFooterInitials; // appears within footer variabletext.theText = what I want it to display 
     littleScoreIDE1.textContent = invisibleScore + "%";
 
-    window.alert("You are all done, " + postFooterInitials22 + "\nRestart the quiz :)");
+    window.alert("You are all done, " + postFooterInitials + "\nPress okay to save the results :)");
 
-    console.log("the end. PostFinitials: " + postFooterInitials + typeof(postFooterInitials));
 });
     
     
