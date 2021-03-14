@@ -173,7 +173,6 @@ submitInitialsButtonE1.addEventListener('click', function(event) {
     littleScoreIDE1.textContent = invisibleScore + "%"; // displays score to the user within the footer
 
     window.alert("You are all done, " + postFooterInitials + "!\n\nPress okay to save the results :)");
-
 });
     
     
