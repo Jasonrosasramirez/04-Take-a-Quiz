@@ -27,7 +27,7 @@ header {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 25px;
     border-top: 4px var(--purpleHighlightingTone) solid;
 }
 
@@ -48,8 +48,8 @@ footer {
     margin-bottom: 10px;
     align-items: center;
     float: center;
-    border-left: 4px var(--purpleHighlightingTone) solid;
-    border-right: 4px var(--purpleHighlightingTone) solid;
+    border-left: 4px var(--redDisplayTone) solid;
+    border-right: 4px var(--redDisplayTone) solid;
 }
 
 
@@ -60,7 +60,7 @@ footer {
     color: black;
     font-size: 16px;
     outline: none;
-    border: 4px var(--redDisplayTone) solid;
+    border: 4px var(--purpleHighlightingTone) solid;
     border-radius: 6px;
     font-family: "Luminari", "fantasy";
     margin: 5px;   
@@ -68,11 +68,11 @@ footer {
 
 .questionChoices:hover,
 #StartSubmitButton:hover { 
-    color: var(--purpleHighlightingTone);
+    color: var(--redDisplayTone);
 }
 
 #initials:hover {
-    border: 3px var(--purpleHighlightingTone) solid;
+    border: 3px var(--redDisplayTone) solid;
 }
 
 #littleInitialID, 

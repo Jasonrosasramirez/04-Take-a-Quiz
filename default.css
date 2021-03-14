@@ -13,6 +13,10 @@ h3 {
     size: 18px;
 }
 
+form label {
+    font-family: "Brush Script MT", "Brush Script Std", cursive;
+    font-weight: bold;
+}
 
 label, p {
     size: 16px;
