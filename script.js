@@ -156,6 +156,8 @@ function resultsPageFunction() {
     
 }
 
+
+// The local storage and results display in footer section. Can only activate from results page, index = 4 in question array
 submitInitialsButtonE1.addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -165,10 +167,12 @@ submitInitialsButtonE1.addEventListener('click', function(event) {
     localStorage.setItem("initials", postFooterInitials); // stores the userinitials when the webpage reloads
     localStorage.setItem("littleScoreID", invisibleScore); // stores the user score when the webpage reloads
 
-    littleInitialIDE1.textContent = postFooterInitials; // appears within footer variabletext.theText = what I want it to display 
-    littleScoreIDE1.textContent = invisibleScore + "%";
+    var storeTheInitials = localStorage.getItem("initials");
 
-    window.alert("You are all done, " + postFooterInitials + "\nPress okay to save the results :)");
+    littleInitialIDE1.textContent = storeTheInitials; // appears within footer variabletext.theText = what I want it to display 
+    littleScoreIDE1.textContent = invisibleScore + "%"; // displays score to the user within the footer
+
+    window.alert("You are all done, " + postFooterInitials + "!\n\nPress okay to save the results :)");
 
 });
     

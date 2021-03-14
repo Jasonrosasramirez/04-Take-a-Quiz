@@ -1,6 +1,7 @@
 :root { 
     --purpleHighlightingTone: rgb(180, 173, 245); 
     --redDisplayTone: rgb(214, 93, 93);
+    --blueQuizBlock: rgb(2, 224, 224);
 }
 
 
@@ -17,7 +18,11 @@ header {
     justify-content: space-around;
     border-bottom: 4px var(--purpleHighlightingTone) solid;
     padding: 5px;
-    margin-bottom: 25px;
+    margin: 40px 0px 25px 0px;
+}
+
+header:hover {
+    border-bottom: 4px var(--redDisplayTone) solid;
 }
 
 .TimerDisplay {
@@ -25,10 +30,17 @@ header {
     font-size: 22px;
     font-weight: bolder;
 }
+.TimerDisplay:hover{
+    color: var(--purpleHighlightingTone);
+}
 
 footer {
     margin-top: 25px;
     border-top: 4px var(--purpleHighlightingTone) solid;
+}
+
+footer:hover {
+    border-top: 4px var(--redDisplayTone) solid;
 }
 
 #highScoreDiv h2 {
@@ -45,13 +57,17 @@ footer {
 .TitleCardContainer {
     height: 300px;
     padding: 40px;
-    margin-bottom: 10px;
+    margin: 0px 50px 10px 50px;
     align-items: center;
     float: center;
     border-left: 4px var(--redDisplayTone) solid;
     border-right: 4px var(--redDisplayTone) solid;
 }
 
+.TitleCardContainer:hover {
+    border-left: 4px var(--blueQuizBlock) solid;
+    border-right: 4px var(--blueQuizBlock) solid;
+}
 
 .questionChoices,
 #StartSubmitButton, 
@@ -70,7 +86,7 @@ footer {
 .questionChoices:hover,
 #StartSubmitButton:hover,
 #submitInitialsButton:hover { 
-    color: var(--redDisplayTone);
+    color: var(--blueQuizBlock);
 }
 
 #initials:hover {
