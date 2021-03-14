@@ -1,6 +1,6 @@
 :root { 
     --purpleHighlightingTone: rgb(180, 173, 245); 
-    
+    --redDisplayTone: rgb(214, 93, 93);
 }
 
 
@@ -44,7 +44,7 @@ header {
 }
 
 .TimerDisplay {
-    color: red;
+    color: var(--redDisplayTone);
     font-size: 22px;
     font-weight: bolder;
 }
@@ -82,18 +82,22 @@ footer {
     height: 50px;
     width: 150px;
     color: black;
-    border-radius: 4px;
     font-size: 16px;
     outline: none;
-    border: 3px solid #3fbb1f;
+    border: 4px var(--redDisplayTone) solid;
+    border-radius: 6px;
+    font-family: "Luminari", "fantasy";
     margin: 5px;   
 }
 
 .questionChoices:hover,
 #StartSubmitButton:hover { 
-    color: #2124c7;
+    color: var(--purpleHighlightingTone);
 }
 
+#initials:hover {
+    border: 3px var(--purpleHighlightingTone) solid;
+}
 
 #littleInitialID, 
 #littleScoreID { 
