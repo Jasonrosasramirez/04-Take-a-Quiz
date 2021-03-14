@@ -156,16 +156,21 @@ function resultsPageFunction() {
     
 }
 
-submitInitialsButtonE1.addEventListener('click', renderPreviousResultsFunction);
-
-// This triggers once the quiz is over and the submit initials button is clicked
-function renderPreviousResultsFunction() {
-    
+submitInitialsButtonE1.addEventListener('click', function(event) {
     event.preventDefault();
 
+    var initialsVariable = document.getElementById("initials").value;
 
+    localStorage.setItem("initials", initialsVariable);
 
+    renderPreviousResultsFunction(); // goes to the section that displays the stored local variables
+});
+    
+    
 
+// This displays things to the bottom footer
+function renderPreviousResultsFunction() {
+    
     var postFooterInitials = localStorage.getItem("initials"); //Initials is the ID of the form text input by the user
 
     littleInitialIDE1.textContent = postFooterInitials; // appears within footer variabletext.theText = what I want it to display 
